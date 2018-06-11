@@ -37,8 +37,8 @@ class ViewController: UIViewController {
             .disposed(by: disposeBag)
 
         tableView.flix.animatable.build([
-            inputProvider,
-            TodoListProvider()
+            TodoListProvider(),
+            inputProvider
             ])
 
         ToDoStore.shared.count.map { "TODO - (\($0))" }.bind(to: navigationItem.rx.title).disposed(by: disposeBag)
